@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Screening</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/site-background.css') }}" />
+  </head>
+  <body>
+    <nav>
+      <a class="brand" href="{{ url_for('home') }}">MindScreen</a>
+      <div>
+        <a href="{{ url_for('home') }}">Home</a
+        ><a href="{{ url_for('screening') }}">Autism Screening</a
+        ><a href="{{ url_for('dashboard') }}">Dashboard</a
+        ><a href="{{ url_for('about') }}">About</a
+        ><a href="{{ url_for('contact') }}">Contact</a>
+      </div>
+    </nav>
+    <main class="container form-page">
+      <p class="eyebrow">Private screening session</p>
+      <h1>Autism Screening Questionnaire</h1>
+      <p>
+        Answer all questions honestly. This tool is not a medical diagnosis.
+      </p>
+      {% with messages = get_flashed_messages(with_categories=true) %}{% for
+      category, message in messages %}
+      <div class="alert {{ category }}">{{ message }}</div>
+      {% endfor %}{% endwith %}
+      <form action="{{ url_for('predict') }}" method="post" novalidate>
+        <fieldset>
+          <legend>Personal Information</legend>
+          <div class="form-grid">
+            <label>Name<input name="name" required autocomplete="name" /></label
+            ><label
+              >Age<input
+                name="age"
+                type="number"
+                min="1"
+                max="100"
+                required /></label
+            ><label
+              >Gender<select name="gender" required>
+                <option value="">Select gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select></label
+            ><label
+              >Email<input
+                name="email"
+                type="email"
+                required
+                autocomplete="email" /></label
+            ><label
+              >Phone Number <small>(optional)</small
+              ><input name="phone" type="tel" autocomplete="tel"
+            /></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Behavioral Questions</legend>
+          <p class="muted">Choose one answer for each question.</p>
+          {% set questions = ["Does the person find it difficult to maintain eye
+          contact?","Does the person have difficulty responding when their name
+          is called?","Does the person have difficulty with social
+          interaction?","Does the person have difficulty with changes in
+          routine?","Does the person show repetitive behaviors or
+          movements?","Does the person have difficulty understanding social
+          cues?","Does the person have unusually strong or focused
+          interests?","Does the person have difficulty communicating with
+          others?","Does the person have difficulty understanding other people's
+          emotions?","Does the person experience unusual sensitivity to sounds,
+          lights, touch, or other sensory experiences?"] %}{% for question in
+          questions %}<label class="question"
+            >Q{{ loop.index }}. {{ question }}<select
+              name="A{{ loop.index }}"
+              required
+            >
+              <option value="">Select an answer</option>
+              <option>Yes</option>
+              <option>Maybe</option>
+              <option>No</option>
+            </select></label
+          >{% endfor %}
+        </fieldset>
+        <label class="consent"
+          ><input type="checkbox" required /> I understand this is an
+          AI-assisted screening indication, not a diagnosis, and agree to submit
+          this information.</label
+        ><button class="button" type="submit">
+          Calculate Screening Result
+        </button>
+      </form>
+    </main>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

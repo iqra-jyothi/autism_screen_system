@@ -1,0 +1,40 @@
+/* Shared visual background for the legacy pages. */
+body {
+  position: relative;
+  isolation: isolate;
+  background: #f7fafc;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 70px 0 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url('/static/images/image.png') no-repeat right center / auto min(72vh, 620px);
+  opacity: .12;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+nav {
+  background: rgba(255, 255, 255, .96);
+}
+
+.card,
+.result-card,
+.step,
+.stat,
+.chart,
+.form-page form {
+  background: rgba(255, 255, 255, .94);
+}
+
+@media (max-width: 700px) {
+  body {
+    background-size: auto min(48vh, 400px);
+  }
+}

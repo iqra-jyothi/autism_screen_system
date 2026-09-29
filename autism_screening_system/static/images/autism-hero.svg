@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 410" role="img" aria-labelledby="title desc">
+<title id="title">Abstract profile illustration</title>
+<desc id="desc">A colorful abstract profile representing different minds and bright futures.</desc>
+<defs>
+  <linearGradient id="wash" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6e9c9"/><stop offset="1" stop-color="#fffdf4" stop-opacity="0"/></linearGradient>
+  <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1b596b"/><stop offset=".38" stop-color="#a54880"/><stop offset=".72" stop-color="#e2a51b"/><stop offset="1" stop-color="#303351"/></linearGradient>
+  <clipPath id="face"><path d="M401 55c52 7 95 47 105 94 8 38-2 73-26 95-19 18-42 25-61 38-12 8-15 21-14 42-41-18-78-50-94-94-17-47-11-106 21-143 18-21 41-35 69-32z"/></clipPath>
+</defs>
+<path fill="url(#wash)" d="M30 55c145-78 444-62 562 25 82 61 41 236-98 294C343 435 91 365 35 248-1 174-5 93 30 55z"/>
+<g opacity=".9" fill="none" stroke="#233b52" stroke-width="5"><path d="M129 288c32-56 43-112 31-167-9-43 20-74 57-68 36 5 42 51 25 85-18 36-11 77 18 103"/><path d="M111 326c45-55 77-79 115-81 43-2 62 24 73 62"/></g>
+<path fill="url(#hair)" d="M296 70c-27 33-39 74-35 118 6 75 53 143 132 177 19 8 36 12 50 11-19-38-11-67 17-86 33-22 68-29 89-67 25-45 18-105-13-143-39-48-105-69-163-44-30 13-59 19-77 34z"/>
+<path fill="#f0c47e" d="M399 67c51 4 94 42 106 87 11 43 1 83-26 106-22 19-51 22-67 41-9 11-10 26-8 43-46-21-80-55-93-98-13-43-7-94 19-131 17-25 39-48 69-48z"/>
+<g clip-path="url(#face)" opacity=".9"><path fill="#c74d65" d="M334 111c36 17 54 44 48 78-7 37-39 68-74 67l-30-86z"/><path fill="#2387a5" d="M387 62c35 23 42 68 23 96-19 28-48 39-77 29l-5-101z"/><path fill="#e2a51b" d="M456 64c-3 44-29 68-60 80-22 9-33 34-23 66 22-3 44-18 69-25 31-9 65-36 72-78z"/><path fill="#4b426d" d="M385 148c35-25 73-25 104 0l-12 92-73 52-45-54z"/></g>
+<path fill="none" stroke="#233b52" stroke-width="7" stroke-linecap="round" d="M430 183c15-13 34-13 48-3m-18 43c12 9 26 10 39 1m-19-55 8 18-11 7"/>
+<path fill="none" stroke="#efb51b" stroke-width="7" d="M363 216c13-10 27-10 39 0m-19 12c0 18 9 29 26 32"/>
+<g fill="none" stroke="#218fbe" stroke-width="3" opacity=".75"><ellipse cx="349" cy="214" rx="205" ry="65" transform="rotate(21 349 214)"/><ellipse cx="370" cy="240" rx="230" ry="72" transform="rotate(-18 370 240)"/></g>
+<g fill="#263c53"><circle cx="105" cy="103" r="5"/><circle cx="167" cy="60" r="4"/><circle cx="567" cy="95" r="5"/><circle cx="579" cy="289" r="4"/></g>
+<g fill="#e3a91c"><circle cx="281" cy="53" r="8"/><circle cx="566" cy="327" r="7"/></g>
+</svg>

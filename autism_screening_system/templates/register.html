@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create account | AutismScreen</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/redesign.css') }}">
+</head>
+<body class="auth-body">
+  <nav class="site-nav"><a class="brand brand-lockup" href="{{ url_for('home') }}"><span class="brand-mark">✣</span><span>Autism<span class="brand-accent">Screen</span><small>AI-Based Autism Screening System</small></span></a><div class="nav-links"><a href="{{ url_for('home') }}">Home</a><a href="{{ url_for('login') }}">Log in</a></div></nav>
+  <main class="auth-shell"><section class="auth-intro"><p class="eyebrow">A clearer next step</p><h1>Start with<br><em>understanding.</em></h1><p>Create an account to begin a guided, AI-assisted screening experience.</p><div class="auth-note">♡ &nbsp; Early support can make a lifetime of difference.</div></section><section class="auth-card"><h2>Create account</h2><p class="auth-subtitle">Register for AutismScreen</p>{% with messages = get_flashed_messages(with_categories=true) %}{% for category, message in messages %}<div class="alert {{ category }}">{{ message }}</div>{% endfor %}{% endwith %}<form method="post"><label>Full name<input type="text" name="name" required autocomplete="name" placeholder="Your name"></label><label>Email address<input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label><label>Password<input type="password" name="password" required minlength="8" autocomplete="new-password" placeholder="At least 8 characters"></label><label>Confirm password<input type="password" name="confirmation" required minlength="8" autocomplete="new-password" placeholder="Repeat your password"></label><button class="button" type="submit">Create account &nbsp; →</button></form><p class="auth-switch">Already have an account? <a href="{{ url_for('login') }}">Log in</a></p></section></main>
+</body>
+</html>
